@@ -96,6 +96,8 @@ describe('Repositories', () => {
       user_id,
     });
 
+    console.log(user)
+
     expect(user).toMatchObject({
       first_name: 'Danilo',
       last_name: 'Vieira',
@@ -105,11 +107,11 @@ describe('Repositories', () => {
           title: 'Rocket League',
         }),
         expect.objectContaining({
-          title: 'Need For Speed: Most Wanted',
-        }),
-        expect.objectContaining({
           title: 'The Last Of Us',
         }),
+        expect.objectContaining({
+          title: 'Need For Speed: Most Wanted',
+        })
       ],
     });
   });
